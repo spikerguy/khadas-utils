@@ -1,0 +1,11 @@
+[Unit]
+Description=Khadas Vim3 - Fan Background Daemon
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/fan monitor
+ExecStop=/usr/bin/fan kill
+
+[Install]
+Alias=khadas-utils.service
+WantedBy=default.target
